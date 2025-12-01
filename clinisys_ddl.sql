@@ -293,20 +293,3 @@ CREATE INDEX idx_solicitacoes_aluno ON solicitacoes_alta(aluno_id);
 CREATE INDEX idx_solicitacoes_professor ON solicitacoes_alta(professor_id);
 CREATE INDEX idx_solicitacoes_atendimento ON solicitacoes_alta(atendimento_id);
 CREATE INDEX idx_solicitacoes_status ON solicitacoes_alta(status);
-
--- ============================================================================
--- COMENTÁRIOS E DOCUMENTAÇÃO DAS TABELAS
--- ============================================================================
-
-COMMENT ON TABLE usuarios IS 'Tabela mãe para herança de usuários do sistema';
-COMMENT ON TABLE recepcionistas IS 'Usuários do tipo Recepcionista (Joined Inheritance)';
-COMMENT ON TABLE professores IS 'Usuários do tipo Professor (Joined Inheritance)';
-COMMENT ON TABLE alunos IS 'Usuários do tipo Aluno (Joined Inheritance)';
-COMMENT ON TABLE clinicas IS 'Clínicas da escola de odontologia';
-COMMENT ON TABLE pacientes IS 'Pacientes atendidos pela clínica-escola';
-COMMENT ON TABLE prontuarios IS 'Prontuários médicos dos pacientes (1:1)';
-COMMENT ON TABLE tipos_atendimentos IS 'Catálogo de tipos de atendimento';
-COMMENT ON TABLE catalogo_procedimentos IS 'Catálogo de procedimentos odontológicos';
-COMMENT ON TABLE atendimentos IS 'Agendamentos e registros de atendimentos';
-COMMENT ON TABLE procedimentos IS 'Registro de procedimentos executados';
-COMMENT ON TABLE solicitacoes_alta IS 'Controle de solicitações de alta de pacientes';
